@@ -1,0 +1,14 @@
+server:
+  port: 12345
+spring:
+  application:
+    name: bussiness-service
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10000/eureka/
+tcc:
+  zookeeper:
+    nodes: 127.0.0.1:2181
+    time-out: 30000
+    enable: true
