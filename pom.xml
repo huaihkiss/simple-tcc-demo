@@ -19,6 +19,8 @@
         <java.version>1.8</java.version>
         <!--SpringCloud最新稳定版本-->
         <spring-cloud.version>Greenwich.SR3</spring-cloud.version>
+        <mybatis-plus.version>3.5.2</mybatis-plus.version>
+        <mysql-driver.version>8.0.30</mysql-driver.version>
     </properties>
     <modules>
         <module>bussiness-demo</module>
@@ -26,8 +28,31 @@
         <module>account-demo</module>
         <module>eureka-server</module>
     </modules>
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.10</version>
+        </dependency>
+    </dependencies>
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <artifactId>mysql-connector-java</artifactId>
+                <groupId>mysql</groupId>
+                <version>${mysql-driver.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.12</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>

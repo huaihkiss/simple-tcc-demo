@@ -8,6 +8,10 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @SpringCloudApplication
 public class ApplicationBootstrap {
     public static void main(String[] args) {
-        SpringApplication.run(ApplicationBootstrap.class,args);
+        try{
+            SpringApplication.run(ApplicationBootstrap.class,args);
+        }catch(Throwable e){
+            e.printStackTrace();
+        }
     }
 }

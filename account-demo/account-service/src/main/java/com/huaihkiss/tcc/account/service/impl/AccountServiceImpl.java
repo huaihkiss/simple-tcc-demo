@@ -1,4 +1,4 @@
-package com.huaihkiss.tcc.account.service.service.impl;
+package com.huaihkiss.tcc.account.service.impl;
 
 import com.huaihkiss.tcc.account.object.dto.AccountDto;
 import com.huaihkiss.tcc.account.service.AccountService;
